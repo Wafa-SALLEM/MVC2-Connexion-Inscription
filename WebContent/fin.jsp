@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>Inscription terminée.</p>
+	<p>Inscription terminée</p>
 </body>
 </html>

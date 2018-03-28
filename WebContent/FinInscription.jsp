@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<center><h1>Récapitulatif inscription</h1></center>
 	<span class="nom">Nom: ${monCandidat['nom']} </span> <br>
  	<span class="prenom">Prénom: ${monCandidat['prenom']}</span> <br>
 	<span class="adr">Adresse: ${monCandidat['adresse']}</span> <br>

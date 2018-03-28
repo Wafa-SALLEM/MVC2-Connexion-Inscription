@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="InscriptionServlet" method="POST" name="formInscri">
-	<span class="login">${monUser['login']} ${monUser['pwd']}</span>
-	<a href="fin.jsp">Quitter</a> <br>
+	<span class="login">Bonjour ${monUser['login']} ${monUser['pwd']}</span> <br>
+	<a href="fin.jsp">Quitter</a>
 	<input type="submit" value="Inscription">
 </form>
 	
