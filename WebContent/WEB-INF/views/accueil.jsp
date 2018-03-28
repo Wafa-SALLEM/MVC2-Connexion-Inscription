@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- action = nom de la servlet -->
 <form action="InscriptionServlet" method="POST" name="formInscri">
 	<span class="login">Bonjour ${monUser['login']} ${monUser['pwd']}</span> <br>
 	<a href="fin.jsp">Quitter</a>

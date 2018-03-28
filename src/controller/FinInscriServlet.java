@@ -25,11 +25,6 @@ public class FinInscriServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	/*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-	}*/
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -42,11 +37,19 @@ public class FinInscriServlet extends HttpServlet {
 		String adresse = request.getParameter("adresse");
 		System.out.println("nom: "+ nom +", prénom = "+ prenom +", adresse = "+ adresse);
 		Candidat candidat = new Candidat(nom, prenom, adresse);
-		request.setAttribute("monCandidat", candidat);
+		
 		/**
 		 * chemin commence par / ==> fichier existe sous WebContent
 		 */
-		this.getServletContext().getRequestDispatcher("/FinInscription.jsp").forward(request, response);
+		if(candidat.getNom().isEmpty() || candidat.getPrenom().isEmpty() || candidat.getAdresse().isEmpty()){
+			String msg="Champs vides";
+			request.setAttribute("monMsg", msg);
+			this.getServletContext().getRequestDispatcher("/WEB-INF/views/inscription.jsp").forward(request, response);
+		}else{
+			request.setAttribute("monCandidat", candidat);
+			this.getServletContext().getRequestDispatcher("/FinInscription.jsp").forward(request, response);
+		}
+		
 	}
 
 }

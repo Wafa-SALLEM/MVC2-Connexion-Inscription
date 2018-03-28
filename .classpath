@@ -26,5 +26,6 @@
 			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/wsallem/Downloads/jstl-1.2.jar/jstl-1.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
